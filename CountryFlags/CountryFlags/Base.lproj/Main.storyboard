@@ -94,6 +94,24 @@
                                     <constraint firstAttribute="width" constant="325" id="eLJ-Sx-8kv"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxo-6i-Jyj">
+                                <rect key="frame" x="20" y="571" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Nqy-D6-gKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-WC-Q8J">
+                                <rect key="frame" x="20" y="612" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Kf5-gh-6QK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Uwe-Xa-XFs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -101,10 +119,16 @@
                             <constraint firstItem="MVi-Gl-o1a" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="1mp-1j-HYH"/>
                             <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="MVi-Gl-o1a" secondAttribute="trailing" constant="20" id="6qc-ck-v0i"/>
                             <constraint firstItem="MVi-Gl-o1a" firstAttribute="top" secondItem="okl-K1-Lo6" secondAttribute="bottom" constant="45" id="BMy-QW-vKl"/>
+                            <constraint firstItem="lxo-6i-Jyj" firstAttribute="top" secondItem="y6f-MN-pe0" secondAttribute="bottom" constant="20" id="En8-3d-ExU"/>
                             <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="y6f-MN-pe0" secondAttribute="trailing" constant="20" id="Fog-qs-eAn"/>
+                            <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="xOu-WC-Q8J" secondAttribute="trailing" constant="20" id="Nk4-eR-V7n"/>
                             <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="okl-K1-Lo6" secondAttribute="trailing" constant="44" id="PzB-rt-NPy"/>
                             <constraint firstItem="okl-K1-Lo6" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="45" id="QRi-fT-zF2"/>
+                            <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="lxo-6i-Jyj" secondAttribute="trailing" constant="20" id="Rky-pk-5oi"/>
+                            <constraint firstItem="xOu-WC-Q8J" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="Ucc-Rr-UM1"/>
                             <constraint firstItem="okl-K1-Lo6" firstAttribute="top" secondItem="Uwe-Xa-XFs" secondAttribute="top" constant="50" id="ZzB-L6-ShU"/>
+                            <constraint firstItem="xOu-WC-Q8J" firstAttribute="top" secondItem="lxo-6i-Jyj" secondAttribute="bottom" constant="20" id="c4J-fg-wNQ"/>
+                            <constraint firstItem="lxo-6i-Jyj" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="hlP-DC-wlC"/>
                             <constraint firstItem="y6f-MN-pe0" firstAttribute="top" secondItem="MVi-Gl-o1a" secondAttribute="bottom" constant="30" id="ieM-Jb-OTt"/>
                             <constraint firstItem="y6f-MN-pe0" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="rfl-5N-5Fs"/>
                         </constraints>
@@ -112,7 +136,9 @@
                     <navigationItem key="navigationItem" id="P85-yt-Czy"/>
                     <connections>
                         <outlet property="countryDetail" destination="y6f-MN-pe0" id="QIS-02-zDH"/>
+                        <outlet property="currencyLabel" destination="xOu-WC-Q8J" id="Hdt-iW-bRy"/>
                         <outlet property="imageDetail" destination="okl-K1-Lo6" id="Nln-uZ-7NV"/>
+                        <outlet property="populationLabel" destination="lxo-6i-Jyj" id="K3P-Tv-ylQ"/>
                         <outlet property="regionDetail" destination="MVi-Gl-o1a" id="FNe-cO-DJQ"/>
                     </connections>
                 </viewController>
@@ -142,6 +168,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="pFp-0H-Slj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IlX-2K-5f1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
