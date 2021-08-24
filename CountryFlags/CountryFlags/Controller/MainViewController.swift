@@ -50,6 +50,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageFlagCell.sd_setImage(with: URL(string: (filteredCountry.flag)!))
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC" {
+            if let detail = segue.destination as? DetailViewController {
+                if let indexPath = searchTableView.indexPathForSelectedRow {
+                    detail.country = filteredCountries[indexPath.row]
+                    searchTableView.reloadData()
+                }
+            }
+        }
+    }
 }
 
 extension MainViewController: UISearchBarDelegate,UISearchDisplayDelegate {

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CountryFlags" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,6 +26,7 @@
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7hu-36-Iug">
                                 <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="wVz-MW-rzq"/>
                                 </constraints>
@@ -36,7 +37,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7hu-36-Iug" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Af3-CB-AIl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ncM-YY-HzL" secondAttribute="bottom" id="Hjy-9V-sNb"/>
@@ -47,17 +48,79 @@
                             <constraint firstItem="ncM-YY-HzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lk0-Oe-co8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Je8-F1-fTF"/>
+                    <navigationItem key="navigationItem" title="Main" id="Je8-F1-fTF">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9bT-ww-Bwd"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchCountry" destination="7hu-36-Iug" id="pGb-hN-ICf"/>
                         <outlet property="searchTableView" destination="ncM-YY-HzL" id="N1H-cG-2GR"/>
+                        <segue destination="0zb-Da-wo4" kind="show" identifier="toDetailsVC" id="T7f-rv-FJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-312" y="856"/>
         </scene>
-        <!--Favorite View Controller-->
+        <!--Detail View Controller-->
+        <scene sceneID="Hgm-Uz-tHB">
+            <objects>
+                <viewController id="0zb-Da-wo4" customClass="DetailViewController" customModule="CountryFlags" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gtL-ek-URA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVi-Gl-o1a">
+                                <rect key="frame" x="20" y="450" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ROR-XE-PlR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6f-MN-pe0">
+                                <rect key="frame" x="20" y="530" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="l2P-8a-GnK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="okl-K1-Lo6">
+                                <rect key="frame" x="45" y="138" width="325" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="IyP-bf-Ho6"/>
+                                    <constraint firstAttribute="width" constant="325" id="eLJ-Sx-8kv"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uwe-Xa-XFs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MVi-Gl-o1a" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="1mp-1j-HYH"/>
+                            <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="MVi-Gl-o1a" secondAttribute="trailing" constant="20" id="6qc-ck-v0i"/>
+                            <constraint firstItem="MVi-Gl-o1a" firstAttribute="top" secondItem="okl-K1-Lo6" secondAttribute="bottom" constant="45" id="BMy-QW-vKl"/>
+                            <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="y6f-MN-pe0" secondAttribute="trailing" constant="20" id="Fog-qs-eAn"/>
+                            <constraint firstItem="Uwe-Xa-XFs" firstAttribute="trailing" secondItem="okl-K1-Lo6" secondAttribute="trailing" constant="44" id="PzB-rt-NPy"/>
+                            <constraint firstItem="okl-K1-Lo6" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="45" id="QRi-fT-zF2"/>
+                            <constraint firstItem="okl-K1-Lo6" firstAttribute="top" secondItem="Uwe-Xa-XFs" secondAttribute="top" constant="50" id="ZzB-L6-ShU"/>
+                            <constraint firstItem="y6f-MN-pe0" firstAttribute="top" secondItem="MVi-Gl-o1a" secondAttribute="bottom" constant="30" id="ieM-Jb-OTt"/>
+                            <constraint firstItem="y6f-MN-pe0" firstAttribute="leading" secondItem="Uwe-Xa-XFs" secondAttribute="leading" constant="20" id="rfl-5N-5Fs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P85-yt-Czy"/>
+                    <connections>
+                        <outlet property="countryDetail" destination="y6f-MN-pe0" id="QIS-02-zDH"/>
+                        <outlet property="imageDetail" destination="okl-K1-Lo6" id="Nln-uZ-7NV"/>
+                        <outlet property="regionDetail" destination="MVi-Gl-o1a" id="FNe-cO-DJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I09-8w-zDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379.71014492753625" y="1573.6607142857142"/>
+        </scene>
+        <!--Favorites-->
         <scene sceneID="jYI-uW-sgs">
             <objects>
                 <viewController id="upp-lh-1jQ" customClass="FavoriteViewController" customModule="CountryFlags" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,7 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="7FC-rm-lhx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Q4i-Xn-hDX"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="Q4i-Xn-hDX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0G-lq-1oo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +144,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IlX-2K-5f1">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" systemColor="labelColor"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="tsg-AX-rYM" kind="relationship" relationship="viewControllers" id="Nhn-lG-egi"/>
@@ -103,6 +166,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uxS-E9-NEz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -122,6 +187,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q4a-ca-lpp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
