@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="CountryFlags" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0Z-Ea-hfe">
+                        <rect key="frame" x="5" y="5" width="190" height="140"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1Q-WC-Yt8">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="140"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-f5-qXf">
+                                <rect key="frame" x="0.0" y="110" width="190" height="30"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cZ6-v0-iVV">
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPP-yr-EJB">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="30"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="highlightedColor" white="0.34327666613520408" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XPP-yr-EJB" firstAttribute="top" secondItem="cZ6-v0-iVV" secondAttribute="top" id="70o-x7-NvZ"/>
+                                        <constraint firstItem="XPP-yr-EJB" firstAttribute="leading" secondItem="cZ6-v0-iVV" secondAttribute="leading" id="CnL-g3-rOR"/>
+                                        <constraint firstAttribute="trailing" secondItem="XPP-yr-EJB" secondAttribute="trailing" id="ZQE-Tb-eAB"/>
+                                        <constraint firstAttribute="bottom" secondItem="XPP-yr-EJB" secondAttribute="bottom" id="b7g-t2-mun"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.23000000000000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sLO-Ts-HKL"/>
+                                </constraints>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O1Q-WC-Yt8" firstAttribute="top" secondItem="z0Z-Ea-hfe" secondAttribute="top" id="18f-7T-Rh1"/>
+                            <constraint firstItem="Gck-f5-qXf" firstAttribute="leading" secondItem="z0Z-Ea-hfe" secondAttribute="leading" id="9D7-sX-3Zj"/>
+                            <constraint firstAttribute="trailing" secondItem="O1Q-WC-Yt8" secondAttribute="trailing" id="Abo-f7-b36"/>
+                            <constraint firstItem="O1Q-WC-Yt8" firstAttribute="leading" secondItem="z0Z-Ea-hfe" secondAttribute="leading" id="D4s-nE-RIF"/>
+                            <constraint firstAttribute="bottom" secondItem="O1Q-WC-Yt8" secondAttribute="bottom" id="UxC-Hb-q3k"/>
+                            <constraint firstAttribute="bottom" secondItem="Gck-f5-qXf" secondAttribute="bottom" id="lN1-HN-bbN"/>
+                            <constraint firstAttribute="trailing" secondItem="Gck-f5-qXf" secondAttribute="trailing" id="zEj-lw-dv1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="z0Z-Ea-hfe" secondAttribute="trailing" constant="5" id="5db-Je-Gpi"/>
+                <constraint firstItem="z0Z-Ea-hfe" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="DDg-sN-33G"/>
+                <constraint firstItem="z0Z-Ea-hfe" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="JcY-8v-Qkc"/>
+                <constraint firstAttribute="bottom" secondItem="z0Z-Ea-hfe" secondAttribute="bottom" constant="5" id="mZ1-sM-faZ"/>
+            </constraints>
+            <size key="customSize" width="252" height="241"/>
+            <connections>
+                <outlet property="blurView" destination="cZ6-v0-iVV" id="jjf-f3-qyN"/>
+                <outlet property="homeBackView" destination="z0Z-Ea-hfe" id="wso-b3-mlY"/>
+                <outlet property="homeBlur" destination="Gck-f5-qXf" id="AUr-sB-qHF"/>
+                <outlet property="imageHome" destination="O1Q-WC-Yt8" id="C9g-q3-zgg"/>
+                <outlet property="labelHome" destination="XPP-yr-EJB" id="hGg-xE-RTB"/>
+            </connections>
+            <point key="canvasLocation" x="239.13043478260872" y="167.07589285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

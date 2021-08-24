@@ -7,11 +7,11 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell {
+class SearchTableViewCell: UITableViewCell {
     
-    static let identifier = "MainTableViewCell"
+    static let identifier = "SearchTableViewCell"
     static func nib() -> UINib {
-        return UINib(nibName: "MainTableViewCell", bundle: nil)
+        return UINib(nibName: "SearchTableViewCell", bundle: nil)
     }
     
     

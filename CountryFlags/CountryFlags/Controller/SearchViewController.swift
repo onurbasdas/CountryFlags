@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImageSVGCoder
 
-class MainViewController: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet var searchCountry: UISearchBar!
     @IBOutlet var searchTableView: UITableView!
@@ -19,7 +19,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchTableView.register(MainTableViewCell.nib(), forCellReuseIdentifier: MainTableViewCell.identifier)
+        searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
         getData()
     }
     
@@ -35,13 +35,13 @@ class MainViewController: UIViewController {
     
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredCountries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = searchTableView.dequeueReusableCell(withIdentifier: MainTableViewCell.identifier, for: indexPath) as! MainTableViewCell
+        let cell = searchTableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
         let filteredCountry = filteredCountries[indexPath.row]
         cell.countryLabelCell.text = filteredCountry.name
         cell.capitalLabelCell.text = filteredCountry.capital
@@ -67,7 +67,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension MainViewController: UISearchBarDelegate,UISearchDisplayDelegate {
+extension SearchViewController: UISearchBarDelegate,UISearchDisplayDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredCountries = countries.filter({$0.name!.contains(searchText)})
         if searchText == "" {
