@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class Service {
-    func fetchCountry(endPoint:String,callback:@escaping ([Country]?) -> Void){
+    static func fetchCountry(endPoint:String,callback:@escaping ([Country]?) -> Void){
         AF.request(Constants.baseUrl + endPoint, method: .get,encoding: JSONEncoding.default).response{ response in
             guard let data = response.data else {return}
             do {

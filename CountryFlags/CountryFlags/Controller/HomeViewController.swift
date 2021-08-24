@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     @IBOutlet var homeCollectionView: UICollectionView!
     
     var homes = [Country]()
-    var service = Service()
     
     override func viewDidLoad() {
         
@@ -22,7 +21,7 @@ class HomeViewController: UIViewController {
     }
     
     func getData() {
-        service.fetchCountry(endPoint: "all") { [self] (result) in
+        Service.fetchCountry(endPoint: "all") { [self] (result) in
             if result != nil {
                 homes.append(contentsOf: result!)
                 homeCollectionView.reloadData()

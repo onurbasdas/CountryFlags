@@ -15,7 +15,6 @@ class SearchViewController: UIViewController {
     
     var countries = [Country]()
     var filteredCountries = [Country]()
-    var service = Service()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,7 @@ class SearchViewController: UIViewController {
     }
     
     func getData() {
-        service.fetchCountry(endPoint: "all") { [self] (result) in
+        Service.fetchCountry(endPoint: "all") { [self] (result) in
             if result != nil {
                 countries.append(contentsOf: result!)
                 filteredCountries.append(contentsOf: result!)
