@@ -82,8 +82,10 @@ class AllCountryViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         allCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.fetchCountry(endPoint: "all") { [self] result in
-            homes1.append(contentsOf: result!)
-            allCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes1.append(contentsOf: result!)
+                allCollectionView.reloadData()
+            }
         }
     }
     
@@ -113,8 +115,10 @@ class AsiaHomeViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
         asiaCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.getCountryRegion(endPoint: "asia") { [self] result in
-            homes2.append(contentsOf: result!)
-            asiaCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes2.append(contentsOf: result!)
+                asiaCollectionView.reloadData()
+            }
         }
     }
     
@@ -143,8 +147,10 @@ class AfricaHomeViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         africaCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.getCountryRegion(endPoint: "africa") { [self] result in
-            homes3.append(contentsOf: result!)
-            africaCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes3.append(contentsOf: result!)
+                africaCollectionView.reloadData()
+            }
         }
     }
     
@@ -173,8 +179,10 @@ class EuropeHomeViewController: UIViewController, UICollectionViewDelegate, UICo
         super.viewDidLoad()
         europeCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.getCountryRegion(endPoint: "europe") { [self] result in
-            homes4.append(contentsOf: result!)
-            europeCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes4.append(contentsOf: result!)
+                europeCollectionView.reloadData()
+            }
         }
     }
     
@@ -203,8 +211,10 @@ class AmericasHomeViewController: UIViewController, UICollectionViewDelegate, UI
         super.viewDidLoad()
         americasCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.getCountryRegion(endPoint: "americas") { [self] result in
-            homes5.append(contentsOf: result!)
-            americasCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes5.append(contentsOf: result!)
+                americasCollectionView.reloadData()
+            }
         }
     }
     
@@ -233,8 +243,10 @@ class AustraliaHomeViewController: UIViewController, UICollectionViewDelegate, U
         super.viewDidLoad()
         australiaCollectionView.register(HomeCollectionViewCell.nib(), forCellWithReuseIdentifier: HomeCollectionViewCell.identifier)
         Service.getCountryRegion(endPoint: "oceania") { [self] result in
-            homes6.append(contentsOf: result!)
-            australiaCollectionView.reloadData()
+            DispatchQueue.main.async {
+                homes6.append(contentsOf: result!)
+                australiaCollectionView.reloadData()
+            }
         }
     }
     
