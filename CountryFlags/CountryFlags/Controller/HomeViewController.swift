@@ -33,6 +33,7 @@ class HomeViewController: UIViewController {
         views.append(user5View)
         views.append(user6View)
         hideOtherViews(view: user1View)
+        navigationItem.title = "All"
     }
     
     func hideOtherViews(view:UIView) {
@@ -50,21 +51,27 @@ class HomeViewController: UIViewController {
         switch continentsSegmentedControl.selectedSegmentIndex {
         case 0:
             hideOtherViews(view: user1View)
+            navigationItem.title = "All"
             break;
         case 1:
             hideOtherViews(view: user2View)
+            navigationItem.title = "Asia"
             break;
         case 2:
             hideOtherViews(view: user3View)
+            navigationItem.title = "Africa"
             break;
         case 3:
             hideOtherViews(view: user4View)
+            navigationItem.title = "Europe"
             break;
         case 4:
             hideOtherViews(view: user5View)
+            navigationItem.title = "Americas"
             break;
         case 5:
             hideOtherViews(view: user6View)
+            navigationItem.title = "Australia"
             break;
         default:
             break;
@@ -225,9 +232,11 @@ class AmericasHomeViewController: UIViewController, UICollectionViewDelegate, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = americasCollectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCell.identifier, for: indexPath) as! HomeCollectionViewCell
         let homeArray = homes5[indexPath.row]
-        let SVGCoder = SDImageSVGCoder.shared
-        SDImageCodersManager.shared.addCoder(SVGCoder)
-        cell.imageHome.sd_setImage(with: URL(string: (homeArray.flag) ?? ""))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            let SVGCoder = SDImageSVGCoder.shared
+            SDImageCodersManager.shared.addCoder(SVGCoder)
+            cell.imageHome.sd_setImage(with: URL(string: (homeArray.flag) ?? ""))
+        }
         cell.labelHome.text = homeArray.name
         return cell
     }

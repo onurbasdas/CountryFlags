@@ -22,6 +22,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O1Q-WC-Yt8">
                                 <rect key="frame" x="0.0" y="0.0" width="190" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="7wv-II-XAv"/>
+                                    <constraint firstAttribute="width" constant="190" id="pkX-S8-YFJ"/>
+                                </constraints>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-f5-qXf">
                                 <rect key="frame" x="0.0" y="110" width="190" height="30"/>
